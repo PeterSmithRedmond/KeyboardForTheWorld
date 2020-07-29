@@ -24,23 +24,23 @@ KeyboardLayout = {
         Size00 : 1.4
     },
     "B": {
-        Indent: 0,
+        IndentRow: 0,
         Size00 : 1.6
     },
     "C": {
-        Indent: 0,
+        IndentRow: 0,
         Size00 : 1.2
     },
     "D": {
-        Indent: 0,
+        IndentRow: 0,
         Size00 : 1.0
     },
     "E": {
-        Indent: 0,
+        IndentRow: 0,
         Size00 : .8
     },
     "F": {
-        Indent: 0,
+        IndentRow: 0,
         Size00 : 1.0
     }
 };

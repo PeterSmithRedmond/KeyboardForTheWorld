@@ -1,7 +1,7 @@
 // There's a KeyboardLayout object
 keyboardState = "";
 nextKeyboardState = "";
-userPreferredKeyboard = null; // TODO: used to be keyboardLushootseed;
+userPreferredKeyboard = null; 
 
 function drawKeyboard()
 {
@@ -30,23 +30,12 @@ function drawKeyboard()
 	if ((prefh / prefw) < prefratio) { prefw = prefh / prefratio; }
 	else prefh = prefw * prefratio;
 
-	var highlightCol = 99996;
-	var hightlightRow = 99993;
 	var ncol = 13;
 	var nrow = 6; // rows A B C D E F; A is on the bottom and F is the function keys
 	var cellInfo = {
-		highlightCol : 99996,
-		highlightRow : 99993,
 		cellw : prefw / ncol,
 		cellh : prefh / nrow
 	};
-
-
-	for (var key of keymap)
-	{
-		var isHighlighted = false;
-		key.isHighlighted = isHighlighted;
-	}
 
 	div.width = prefw;
 	div.height = prefh;
@@ -60,19 +49,9 @@ function drawKeyboard()
 
 	for (var key of keymap)
 	{
-		if (!key.isHighlighted)
-		{
-			drawCellDiv(div, key, cellInfo);
-		}
+		drawCellDiv(div, key, cellInfo);
 	}
 
-	for (var key of keymap)
-	{
-		if (key.isHighlighted)
-		{
-			drawCellDiv(div, key, cellInfo);
-		}
-	}
 
 }
 
@@ -128,7 +107,6 @@ function drawCellDiv(div, element, cellInfo)
 	var type = element.type;
 	var show = element.to;
 	if (element.show != undefined) show = element.show; // e.q. when to is "q" but the key should have "Q"
-	var isHighlighted = element.isHighlighted;
 	var extra = element.extra;
 
 	var margin = 2;
@@ -173,45 +151,6 @@ function drawCellDiv(div, element, cellInfo)
 	}
 	var font = fontSize (fw, 20); //"25px Ariel";
 
-
-	// Highlight stuff was from the periodic table stuff.
-	// It is probably not needed for the keyboard.
-	if (isHighlighted)
-	{
-		zoom = 0.4;
-		x = x - (cellw*zoom) / 2;
-		y = y - (cellh*zoom) / 2;
-		cellw = cellw * (1 + zoom);
-		cellh = cellh * (1 + zoom);
-		cellColor = "#CFC"
-		font = fontSize (cellw, 22); //"25px Ariel";
-	}
-	else if (row == cellInfo.highlightRow)
-	{
-		if (col == cellInfo.highlightCol -1) // push to the left
-		{
-			cellw = cellw * 0.8;
-		}
-		else if (col == cellInfo.highlightCol +1) // push to the right
-		{
-			var delta = cellw * 0.2;
-			cellw -= delta;
-			x += delta;
-		}
-	}
-	else if (col == cellInfo.highlightCol)
-	{
-		if (row == cellInfo.highlightRow - 1)
-		{
-
-		}
-		else if (row == cellInfo.highlightRow +1)
-		{
-			var delta = cellh * 0.2;
-			cellh -= delta;
-			y += delta;
-		}
-	}
 
 	cell.style.backgroundColor = cellColor;
 	html = "<div style='font:" + font + "'>" + show + "</div>";

@@ -27,7 +27,7 @@ if (showKeyboardId) {
 const cldrFile = document.querySelector("#cldr-file-input");
 if (cldrFile != null) {
 	cldrFile.addEventListener('change', (event) => {
-		let keyboard = ReadCldrFile(event.target);
+		ReadCldrFile(event.target, ()=>{ drawKeyboard();});
 	});
 }
 

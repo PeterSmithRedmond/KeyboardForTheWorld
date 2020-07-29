@@ -7,7 +7,7 @@ const log = document.querySelector("#uiLog");
 
 
 
-function ReadCldrFile(fileSelect)
+function ReadCldrFile(fileSelect, oncomplete)
 {
 	let file = fileSelect.files[0];
 	let reader = new FileReader();
@@ -29,6 +29,10 @@ function ReadCldrFile(fileSelect)
 					log.innerHTML += "DBG:ERROR=" + chrome.extension.lastError.message +"<br/>\n";
                 }				
 			  });
+
+			if (oncomplete != null) {
+				oncomplete(keyboard);
+			}
 		}
 	}
 }
@@ -82,7 +86,6 @@ function ParseCldrKeyboardKeyMapMap(mapXml)
 {
 	// <map iso="B00" to="SHIFT" show="Shift" type="control" />
 	// <map iso="{the iso position}" to="{the output}" [longPress="{long press keys}"] [transform="no"] />
-	//TODO: to is escaped with an e.g. \u0041 is an A notation
 	var map = new Object();
     map.iso = mapXml.hasAttribute("iso") ? mapXml.getAttribute("iso") : "D01";
     map.to = mapXml.hasAttribute("to") ? UnescapeXmlUnicodeU(mapXml.getAttribute("to")) : "Q";
@@ -132,7 +135,7 @@ function UnescapeXmlUnicodeU(str)
 			{
 				// substring is start to lastidx-1 (it's an index, not a length).
 				// Split by :Pattern_White_Spaces: as defined in https://www.unicode.org/reports/tr18/
-				// TODO: this isn't correct. OTOH, I can't even find a single example
+				// TODO: this isn't complete. OTOH, I can't even find a single example
 				// of any \u{} expression that includes any whitespace at all.
 				const ws = new RegExp("[ \t]+");
 				let hexlist = str.substring(idx+3,lastidx).split(ws);
