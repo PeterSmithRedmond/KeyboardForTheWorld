@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Language Keyboard</title>
+		<!-- Note: for security reasons, plugins are not allowed to have any
+		     inline JavaScript code. This includes attaching 'onchange' events
+			 or <script>...</script> tags except for ones with a src='...' value.
+		 -->
+    </head>
+    <body>
+        <div>
+			<h1>Your language keyboard</h1>
+			<input type="file" id="cldr-file-input" accept=".xml"  /> 
+			<button id="showKeyboardId">Show Keyboard</button>
+		</div>
+			<input id="uiTextInput" type="text" style="height:100px; width:550px">
+		</div>
+		<hr />
+		<div id="uiDiv" style="position: relative; height:200px"></div>
+		<hr />
+		<h1>Logging...</h1>
+		<div id="uiLog">(logging)</div>
+		
+		
+		<!-- Scripts must be after the DOM is set up -->
+		<script src="/js/Keyboard_Layout.js"></script>
+		<script src="/js/CLDR_Keyboard.js"></script>
+		<script src="/js/DrawKeyboard.js"></script>
+		<script src="/js/startup.js"></script>
+    </body>
+</html>

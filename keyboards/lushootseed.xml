@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyboard SYSTEM "../dtd/ldmlKeyboard.dtd">
+<keyboard locale="en">
+	<version platform="10" number="1"/>
+	<names>
+		<name value="Lushootseed"/>
+	</names>
+	<settings fallback="omit"/>
+	<keyMap>
+        <map iso="F00" to="esc" type="control" />
+        <map iso="F01" to="F1" type="control" />
+        <map iso="F02" to="F2" type="control" />
+        <map iso="F03" to="F3" type="control" />
+        <map iso="F04" to="F4" type="control" />
+        <map iso="F05" to="F5" type="control" />
+        <map iso="F06" to="F6" type="control" />
+        <map iso="F07" to="F7" type="control" />
+        <map iso="F08" to="F8" type="control" />
+        <map iso="F09" to="F9" type="control" />
+        <map iso="F10" to="F10" type="control" />
+        <map iso="F11" to="F11" type="control" />
+        <map iso="F12" to="F12" type="control" />
+        <map iso="F13" to="DEL" type="control" />
+
+        <map iso="E00" to="©" type="punctuation" />
+        <map iso="E01" to="1" type="number" />
+        <map iso="E02" to="2" type="number" />
+        <map iso="E03" to="3" type="number" />
+        <map iso="E04" to="4" type="number" />
+        <map iso="E05" to="5" type="number" />
+        <map iso="E06" to="6" type="number" />
+        <map iso="E07" to="7" type="number" />
+        <map iso="E08" to="8" type="number" />
+        <map iso="E09" to="9" type="number" />
+        <map iso="E10" to="0" type="number" />
+        <map iso="E11" to="-" type="punctuation" />
+        <map iso="E11" to="=" type="punctuation" />
+        <map iso="E13" to="BACKSPACE" show="Back" type="control" />
+
+        <map iso="D00" to="\t" show="TAB" type="punctuation" />
+        <map iso="D01" to="q" type="letter" />
+        <map iso="D02" to="w" type="letter" />
+        <map iso="D03" to="ə" type="letter" />
+        <map iso="D04" to="š" type="letter" />
+        <map iso="D05" to="t" type="letter" />
+        <map iso="D06" to="y" type="letter" />
+        <map iso="D07" to="u" type="letter" />
+        <map iso="D08" to="i" type="letter" />
+        <map iso="D09" to="ʷ" type="letter" />
+        <map iso="D10" to="p" type="letter" />
+        <map iso="D11" to="[" type="punctuation" />
+        <map iso="D12" to="]" type="punctuation" />
+        <map iso="D13" to="\\" type="punctuation" />
+
+        <map iso="C00" to="CAPSLOCK" show="CAPS" type="control" />
+        <map iso="C01" to="a" type="letter" />
+        <map iso="C02" to="s" type="letter" />
+        <map iso="C03" to="d" type="letter" />
+        <map iso="C04" to="ʔ" type="letter" />
+        <map iso="C05" to="g" type="letter" />
+        <map iso="C06" to="h" type="letter" />
+        <map iso="C07" to="ǰ" type="letter" />
+        <map iso="C08" to="k" type="letter" />
+        <map iso="C09" to="l" type="letter" />
+        <map iso="C10" to="ɬ" type="letter" />
+        <map iso="C11" to="'" type="punctuation" />
+        <map iso="C13" to="ENTER" show="Enter" type="punctuation" />
+            
+        <map iso="B00" to="SHIFT" show="Shift" type="control" />
+        <map iso="B01" to="x̌" type="letter" />
+        <map iso="B02" to="x" type="letter" />
+        <map iso="B03" to="c" type="letter" />
+        <map iso="B04" to="č" type="letter" />
+        <map iso="B05" to="b" type="letter" />
+        <map iso="B06" to="n" type="letter" />
+        <map iso="B07" to="m" type="letter" />
+        <map iso="B08" to="," type="punctuation" />
+        <map iso="B09" to="." type="punctuation" />
+        <map iso="B10" to="/" type="punctuation" />
+        <map iso="B13" to="SHIFT" show="Shift" type="control" />
+            
+        <map iso="A00" to="CONTROL" show="Ctrl" type="control" />
+        <map iso="A01" to="WINDOWS" show="WIN" type="control" />
+        <map iso="A02" to="ALT" show="Alt" type="control" />
+        <map iso="A03" to=" " show=" " type="punctuation" />
+        <map iso="A04" to="ALT" show="Alt" type="control" />
+        <map iso="A05" to="WINDOWS" show="WIN" type="control" />
+        <map iso="A06" to="SELECT" show="SEL" type="control" />
+        <map iso="A13" to="CONTROL" show="Ctrl" type="control"/>
+    </keyMap>
+    <keyMap modifiers="caps">
+        <map iso="F00" to="esc" type="control" />
+        <map iso="F01" to="F1" type="control" />
+        <map iso="F02" to="F2" type="control" />
+        <map iso="F03" to="F3" type="control" />
+        <map iso="F04" to="F4" type="control" />
+        <map iso="F05" to="F5" type="control" />
+        <map iso="F06" to="F6" type="control" />
+        <map iso="F07" to="F7" type="control" />
+        <map iso="F08" to="F8" type="control" />
+        <map iso="F09" to="F9" type="control" />
+        <map iso="F10" to="F10" type="control" />
+        <map iso="F11" to="F11" type="control" />
+        <map iso="F12" to="F12" type="control" />
+        <map iso="F13" to="DEL" type="control" />
+                        
+        <map iso="E00" to="~" type="punctuation" />
+        <map iso="E01" to="!" type="punctuation" />
+        <map iso="E02" to="@" type="punctuation" />
+        <map iso="E03" to="#" type="punctuation" />
+        <map iso="E04" to="$" type="punctuation" />
+        <map iso="E05" to="%" type="punctuation" />
+        <map iso="E06" to="^" type="punctuation" />
+        <map iso="E07" to="&amp;" type="punctuation" />
+        <map iso="E08" to="*" type="punctuation" />
+        <map iso="E09" to="(" type="punctuation" />
+        <map iso="E10" to=")" type="punctuation" />
+        <map iso="E11" to="_)" type="punctuation" />
+        <map iso="E11" to="+" type="punctuation" />
+        <map iso="E13" to="BACKSPACE" show="Backspace" type="control"/>
+
+        <map iso="D00" to="\t" show="TAB" type="punctuation"/>
+        <map iso="D01" to="q̓" type="letter" />
+        <map iso="D02" to="w̓" type="letter" />
+        <map iso="D03" to="q̓ʷ" type="letter" />
+        <map iso="D04" to="√" type="letter" />
+        <map iso="D05" to="t̕" type="letter" />
+        <map iso="D06" to="y̓" type="letter" />
+        <map iso="D07" to="" type="letter" />
+        <map iso="D08" to="kʷ" type="letter" />
+        <map iso="D09" to="" type="letter" />
+        <map iso="D10" to="p̓" type="letter" />
+        <map iso="D11" to="{" type="punctuation" />
+        <map iso="D12" to="}" type="punctuation" />
+        <map iso="D13" to="|" type="punctuation" />
+
+        <map iso="C00" to="CAPLOCK" show="CAPS" type="control"/>
+        <map iso="C01" to="qʷ" type="letter" />
+        <map iso="C02" to="" type="letter" />
+        <map iso="C03" to="dᶻ" type="letter" />
+        <map iso="C04" to="" type="letter" />
+        <map iso="C05" to="gʷ" type="letter" />
+        <map iso="C06" to="" type="letter" />
+        <map iso="C07" to="k̓ʷ" type="letter" />
+        <map iso="C08" to="k̓" type="letter" />
+        <map iso="C09" to="l̕" type="letter" />
+        <map iso="C10" to="ƛ̕" type="punctuation" />
+        <map iso="C11" to="&quot;" type="punctuation" />
+        <map iso="C13" to="ENTER" show="Enter" type="punctuation"/>
+            
+        <map iso="B00" to="SHIFT" show="Shift" type="control"/>
+        <map iso="B01" to="x̌ʷ" type="letter" />
+        <map iso="B02" to="xʷ" type="letter" />
+        <map iso="B03" to="c̓" type="letter" />
+        <map iso="B04" to="č̓" type="letter" />
+        <map iso="B05" to="b̓" type="letter" />
+        <map iso="B06" to="n̓" type="letter" />
+        <map iso="B07" to="m̓" type="letter" />
+        <map iso="B08" to="&lt;" type="punctuation" />
+        <map iso="B09" to="&gt;" type="punctuation" />
+        <map iso="B10" to="?" type="punctuation" />
+        <map iso="B13" to="SHIFT" show="Shift" type="control"/>
+            
+        <map iso="A00" to="CONTROL" show="Ctrl" type="control"/>
+        <map iso="A01" to="WINDOWS" show="WIN" type="control"/>
+        <map iso="A02" to="ALT" show="Alt" type="control"/>
+        <map iso="A03" to=" " show=" " type="punctuation"/>
+        <map iso="A04" to="ALT" show="Alt" type="control"/>
+        <map iso="A05" to="WINDOWS" show="WIN" type="control"/>
+        <map iso="A06" to="SELECT" show="SEL" type="control"/>
+        <map iso="A13" to="CONTROL" show="Ctrl" type="control"/>
+    </keyMap>
+</keyboard>
