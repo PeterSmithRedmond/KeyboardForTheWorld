@@ -8,4 +8,4 @@ This project explores the Unicode CLDR keyboard data and LDML keyboard format an
 
 # Links
 
-See the [About Unicde](About_Unicode_CLDR_Keyboards.md) file for lots of technical details.
+See the [About Unicode](About_Unicode_CLDR_Keyboards.md) file for lots of technical details.

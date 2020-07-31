@@ -2,7 +2,7 @@
 
 There are over 5,000 different languages spoken in the world. Some are very popular, and are well supported by computer operating systems. But there are many other small languages: languages spoken in one region, and with few enough people that they have little to no support.
 
-My own journey to learning this was when I learned about dxʷləšucid (Lushootseed), a language spoken by several of the Indian tribes. There are Lushootseed keyboards and fonts for different computers -- but from a computer geek point of view, these are unsatisfying. Many pacific northwest (PNW) languages predate Unicode; the letter are described by shape and don't have a single, perfect Unicode definition. 
+My own journey to learning this was when I learned about dxʷləšucid (Lushootseed), a language spoken by several of the Indian tribes in my area. There are Lushootseed keyboards and fonts for different computers -- but from a computer geek point of view, these are unsatisfying. Many pacific northwest (PNW) languages predate Unicode; the letters are described by shape and don't have a single, perfect Unicode definition. 
 
 The Unicode people, not surprisingly, are trying to tackle this problem by updating the creating a format to describe keyboard binding
 
@@ -58,19 +58,17 @@ Enter the \u{41} format. XML has excellant Unicode support via both direct utf-8
 
 That's not good enoughh for the Unicode people. They added a new \u{xxxx} escape. But wait! It also supports code in a \uXXXXX format, and also the \u{xxxx} format handles multiple characters. But only if they are seperated with spaces, and by spaces they mean seperated with all the characters in the [:Pattern_White_Spaces:](https://www.unicode.org/reports/tr18/) regex definition. 
 
-
-
 Oh -- and it also supports characters in either \uxxxx or \uXXXXXXXX or \xxx or \x{uuuu} format, none of which are present in any of keyboards in the repository. And these are only sometimes accepted; it's not really clear which XML elements can be escaped in which formats.
 
 ### Pattern_White_Spaces details
 
-This requires more snark than normal. In the \u{hh hh hh} format, the spaces can be other characters which are white-space-like. The LDML people say this is defined in [TR18](https://www.unicode.org/reports/tr18/), but that document mentions Pattern_White_Space exactly once, in a reference to [TR44](https://www.unicode.org/reports/tr44/#Pattern_White_Space).
+This requires more snark than normal. In the \u{hh hh hh} format, the spaces can be other characters which are white-space-like. The LDML spec merely says this is defined in [TR18](https://www.unicode.org/reports/tr18/), but that document mentions Pattern_White_Space exactly once, in a reference to [TR44](https://www.unicode.org/reports/tr44/#Pattern_White_Space).
 
 In **TR44**, Pattern_White_Space is defined in PropList.txt with the note that it's a B and N type, where B means it's binary and N says that it's Normative, meaning it's part of the real standard and not merely a proposal.
 
 As a brief aside: it might be awesome if any computer language, anywhere, included a complete (ish) set of Unicode functions and tables so that I could just split a string based on "all characters which match Pattern_White_Space".
 
-Downlowing [PropList.txt](http://www.unicode.org/Public/13.0.0/ucd/PropList.txt), we learn that Patter_White_Space is currently these characters:
+Downlowing [PropList.txt](http://www.unicode.org/Public/13.0.0/ucd/PropList.txt), we learn that Pattern_White_Space is currently these characters:
 
 ```
 0009..000D    ; Pattern_White_Space # Cc   [5] <control-0009>..<control-000D>
@@ -92,7 +90,7 @@ The very first PropList.txt is from [2.0-Update](https://www.unicode.org/Public/
 2029          ; Pattern_White_Space # Zp       PARAGRAPH SEPARATOR
 ```
 
-So it looks like Pattern_White_Space has changed since it was first added. The characters that make it up are:
+So it looks like Pattern_White_Space has not changed at all since it was first added. The characters that make it up are:
 1. tab, LF, vertical tab, form-feed, CR
 2. Space
 3. next-line (U+85) from the Latin-1 supplement
